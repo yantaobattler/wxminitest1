@@ -19,6 +19,7 @@ Page({
   onLoad: function () {
     if (app.globalData.userInfo) {
       console.log("1")
+      console.log(app.globalData.userInfo)
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -71,10 +72,13 @@ Page({
       wx.startSoterAuthentication({
         requestAuthModes: ['fingerPrint'],
         challenge: 'test',
-        authContent: '小程序示例',
+        authContent: '测试小程序',
         success: (res) => {
           wx.showToast({
             title: '认证成功'
+          })
+          this.setData({
+            motto: '测试小程序\n指纹验证成功',
           })
         },
         fail: (err) => {

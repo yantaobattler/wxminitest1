@@ -1,0 +1,17 @@
+<!--pages/itsm/itsm_list.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">工单列表</view>
+            <view class="weui-panel__bd">
+              <block wx:for="{{itsmlist}}" wx:key="id" wx:for-item="item" wx:for-index="index" >
+                <navigator class="weui-media-box weui-media-box_text" url="itsm_detail?id={{item.id}}">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">{{item.topic}}</view>
+                    <view class="weui-media-box__desc">{{item.text}}</view>
+                </navigator>
+              </block>
+            </view>
+        </view>
+    </view>
+</view>
+

@@ -4,8 +4,20 @@
     "pages/logs/logs",
     "pages/my/my",
     "pages/news/news",
-    "pages/itsm/itsm"
+    "pages/itsm/itsm",
+    "pages/news/news_detail",
+    "pages/itsm/itsm_new",
+    "pages/itsm/itsm_list",
+    "pages/itsm/itsm_detail",
+    "pages/map/location"
   ],
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EB5702",
@@ -14,8 +26,6 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  
-  
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#3cc51f",

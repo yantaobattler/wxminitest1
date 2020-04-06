@@ -7,7 +7,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {
+      nickName: "未登录",
+      country: "无",
+      province: "无",
+      city: "无",
+    }
 
   },
 
@@ -15,10 +20,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo: app.globalData.userInfo,
-    })
-
+    
+    console.log(app.globalData.userInfo)
   },
 
   /**
@@ -26,12 +29,18 @@ Page({
    */
   onReady: function () {
 
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
+    }
 
   },
 

@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+        "mp-cells": "/pages/weui/cells/cells",
+        "mp-cell": "/pages/weui/cell/cell",
+        "mp-badge": "/pages/weui/badge/badge"
+  },
+  "navigationBarTitleText": "工单处理",
+  "enablePullDownRefresh": true
 }

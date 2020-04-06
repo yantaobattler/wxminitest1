@@ -1,2 +1,34 @@
 <!--pages/itsm/itsm.wxml-->
-<text>pages/itsm/itsm.wxml</text>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-panel">
+      <view class="weui-panel__hd">待办工单（下拉刷新</view>
+        <view class="weui-panel__bd">
+          <mp-cells>
+            <mp-cell link url="itsm_list">
+              <view style="display: inline-block; vertical-align: middle">事件工单</view>
+              <mp-badge content="{{count}}" style="margin-left: 5px;"/>
+            </mp-cell>
+            <mp-cell link url="itsm_list">
+              <view style="display: inline-block; vertical-align: middle">操作间工单</view>
+              <mp-badge content="{{count}}" style="margin-left: 5px;"/>
+            </mp-cell>
+          </mp-cells>
+      </view>
+    </view>
+    <view class="weui-panel">
+      <view class="weui-panel__hd">新建工单</view>
+       <view class="weui-panel__bd">
+        <mp-cells>
+          <mp-cell link url="itsm_new">
+            <view  style="display: inline-block; vertical-align: middle">事件工单</view>
+          </mp-cell>
+          <mp-cell link url="itsm_new">
+            <view style="display: inline-block; vertical-align: middle">操作间工单</view>
+          </mp-cell>
+        </mp-cells>
+      </view>
+    </view>
+  </view>
+</view>
+

@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "mp-cell": "/pages/weui/cell/cell",
+    "mp-cells": "/pages/weui/cells/cells"
+  },
   "navigationBarTitleText": "个人信息"
 }

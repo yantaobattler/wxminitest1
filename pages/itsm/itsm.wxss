@@ -1,1 +1,2 @@
 /* pages/itsm/itsm.wxss */
+@import '../common.wxss';

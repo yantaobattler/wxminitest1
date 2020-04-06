@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+        "mp-toptips": "/pages/weui/toptips/toptips",
+        "mp-cells": "/pages/weui/cells/cells",
+        "mp-cell": "/pages/weui/cell/cell",
+        "mp-checkbox": "/pages/weui/checkbox/checkbox",
+        "mp-checkbox-group": "/pages/weui/checkbox-group/checkbox-group",
+        "mp-form": "/pages/weui/form/form"
+  }
+}
