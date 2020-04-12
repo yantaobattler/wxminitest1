@@ -42,6 +42,29 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var self = this;
+    wx.request({
+      url: 'http://39.107.236.31:8080/itsm/select',
+      header: {
+        'content-type': 'application/json', // 默认值
+        'charset': 'utf-8'
+      },
+      success(res) {
+        console.log("success")
+        console.log(res.data)
+        self.setData({
+          itsmlist: res.data.data
+        })
+      },
+      fail(res) {
+        console.log("fail")
+        console.log(res.data)
+        wx.showToast({
+          icon: 'none',
+          title: '列表加载失败!!'
+        })
+      }
+    })
 
   },
 

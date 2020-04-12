@@ -87,9 +87,29 @@ Page({
           })
         }
       } else {
-        wx.showToast({
-          title: '提交成功'
+        wx.request({
+          url: 'http://39.107.236.31:8080/itsm/add',
+          data: this.data.formData,
+          header: {
+            'content-type': 'application/json',
+            'charset': 'utf-8' // 默认值
+          },
+          success(res) {
+            wx.showToast({
+              title: '提交成功'
+            })
+          },
+          fail(res) {
+            wx.showToast({
+              icon: 'none',
+              title: '提交失败!!'
+            })
+            console.log(res.data)
+          }
         })
+
+
+        
         console.log(this.data.formData)
       }
     })
